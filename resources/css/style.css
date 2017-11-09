@@ -1,0 +1,138 @@
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.content{
+  display: flex;
+  height: 60rem;
+}
+div{
+display: block;
+}
+/* Header */
+header  {
+  display: flex;
+  height: 4.0rem;
+  padding: 1.0rem 1.5rem;
+  z-index: 100%;
+  width: 100%;
+}
+.head li{
+  display: inline-block;
+}
+
+header h2 {
+  font-size: 2.0rem;
+  color: grey;
+  font-weight: bold;
+}
+header b {
+  font-size: 2.0rem;
+  color: black;
+}
+header li {
+  display: flex;
+  line-height:1.0rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+/* Start */
+
+.start {
+  display: flex;
+  padding:2.0rem 1.5rem;
+  background-color: grey;
+}
+.start img {
+  width: 60%;
+  height:auto;
+  align-items: flex-start;
+  margin-right: 1.5rem;
+}
+
+.start2 {
+  display:block;
+  margin-left:1.5rem;
+  align-items: right;
+  justify-content: center;
+  width: 40%;
+  height: 40%;
+}
+.start h1{
+  font-size:3rem;
+  font-weight: bold;
+}
+.button{
+background-color: darkgrey;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+color: white;
+width: 20%;
+height: 2rem;
+text-align: center;
+font-size: 1rem;
+}
+
+/* Practice */
+.practice{
+  display: flex;
+  padding:2.0rem 1.5rem;
+  flex-wrap: wrap;
+  margin: 1.0rem;
+  width:100%;
+}
+.practice img{
+  width: 60%;
+  margin-right: 1.5rem;
+}
+.practice h1{
+  color:darkgrey;
+  margin-bottom: 1.5rem;
+  font-size:3rem;
+}
+.practicebox p{
+ max-width: 60%
+}
+.practice .block{
+ display: block;
+ width:40%;
+ padding: 1rem;
+}
+.block img{
+ width:14%;
+ height: auto;
+}
+/* Learn */
+.learn{
+display: block;
+margin:1rem;
+background-color: grey;
+width: 100%
+}
+.learn h1{
+  font-size:2rem;
+  font-weight: bold;
+  margin-top:2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.learn .block{
+background-color: white;
+margin: 1rem;
+
+}
+.learn .block img{
+height: auto;
+width: auto;
+}
+.learn .block h5{
+font-size: 2rem;
+margin-top: 1rem;
+}
+.learnbox{
+padding: 2rem 4rem;
+}
