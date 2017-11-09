@@ -1,10 +1,10 @@
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 .content{
-  display: flex;
+  display: block;
   height: 60rem;
 }
 div{
@@ -12,11 +12,14 @@ display: block;
 }
 /* Header */
 header  {
-  display: flex;
-  height: 4.0rem;
-  padding: 1.0rem 1.5rem;
-  z-index: 100%;
-  width: 100%;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
 }
 .head li{
   display: inline-block;
@@ -35,7 +38,12 @@ header li {
   display: flex;
   line-height:1.0rem;
 }
+header nav a {
+text-decoration: none;
+color: darkgrey;
+font-weight: 300;
 
+}
 header .mobile {
   display: none;
 }
@@ -43,7 +51,7 @@ header .mobile {
 /* Start */
 
 .start {
-  display: flex;
+  display: block;
   padding:2.0rem 1.5rem;
   background-color: grey;
 }
@@ -78,40 +86,193 @@ font-size: 1rem;
 }
 
 /* Practice */
-.practice{
-  display: flex;
-  padding:2.0rem 1.5rem;
-  flex-wrap: wrap;
-  margin: 1.0rem;
-  width:100%;
+.practicecontainer {
+    width: 100%;
+    position: relative;
+    top: 4rem;
+    z-index: 10;
+    background-color: rgb(213,248,255);
+    display: flex;
 }
-.practice img{
-  width: 60%;
-  margin-right: 1.5rem;
+.practicecontent {
+    padding: 32px 0px 32px 24px;
+    display: flex;
+    background-color: lightblue;
 }
-.practice h1{
-  color:darkgrey;
-  margin-bottom: 1.5rem;
-  font-size:3rem;
+.leftbox {
+    margin-right: 24px;
+    display: block;
 }
-.practicebox p{
- max-width: 60%
+.leftbox h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 24px;
 }
-.practice .block{
- display: block;
- width:40%;
- padding: 1rem;
+.rightbox {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
 }
-.block img{
- width:14%;
- height: auto;
+.emanuel {
+    margin-bottom: 2rem;
+    display: block;
+}
+.emanuel img {
+    max-width: 100%;
+    height: auto;
+}
+.leftbox p {
+    font-weight: 100;
+    margin-bottom: 32px;
+}
+.leftbox span {
+    font-weight: 300;
+    font-size: 0.75rem;
+}
+.infobox {
+    width: 423px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+#oliver {
+    background-color: rgb(255,233,155);
+}
+.desktoppic {
+    width: 35%;
+}
+.desktoppic img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem;
+    border: 1px solid rgb(220,220,220);
+}
+.mobilepic {
+    display: none;
+}
+.textbox {
+    color: rgb(16,16,16);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 2.5rem 1.5rem 3rem 2rem;
+}
+.textbox a {
+    color: blue;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.textbox h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: .4px;
+}
+.textbox span {
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+.textbox a {
+    color: blue;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+#special {
+    display: none;
+}
+.infobox {
+    width: 423px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
 }
 /* Learn */
+.learningcontainer {
+    position: relative;
+    z-index: 10;
+    top: 4rem;
+    background-color: rgb(123,211,229);
+    padding-bottom: 1.5rem;
+}
+.learningcontainer h1 {
+    color: rgb(16,16,16);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1.5rem 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.learningbox {
+    color: rgb(64,64,64);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+}
+.subjects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.subjectbox {
+    height: 276px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 1rem;
+    background-color: white;
+}
+.subjectpic {
+    margin: 0;
+    padding: 0;
+}
+.subjectpic img {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    border-style: none;
+}
+.subjecttext {
+    margin: 0;
+    padding: 0;
+}
+.subjecttext h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0.9rem 0rem 0.5rem 1rem;
+    padding: 0;
+}
+.subjecttext span, p {
+    font-weight: 300;
+    margin-left: 1rem;
+}
+
+.subjecttext span {
+    display: inline-block;
+    margin: 0 0 0.5rem 1rem;
+    color: rgb(52,89,97);
+    font-size: 0.85rem;
+}
+
+
 .learn{
 display: block;
 margin:1rem;
 background-color: grey;
-width: 100%
+width: 100%;
+flex-wrap: wrap;
 }
 .learn h1{
   font-size:2rem;
@@ -121,13 +282,14 @@ width: 100%
   text-align: center;
 }
 .learn .block{
+  display: block;
 background-color: white;
 margin: 1rem;
-
+width: 20rem;
 }
 .learn .block img{
 height: auto;
-width: auto;
+width: 18rem;
 }
 .learn .block h5{
 font-size: 2rem;
@@ -135,4 +297,48 @@ margin-top: 1rem;
 }
 .learnbox{
 padding: 2rem 4rem;
+}
+
+/* Thesis */
+
+.thesis{
+display: block;
+padding: 1.5rem 2.0rem;
+}
+.thesis h1{
+  font-size:2rem;
+  font-weight: bold;
+  margin-top:2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.thesis video{
+width: 60%;
+}
+.thesis .block{
+width: 40%;
+
+}
+.thesis .block img{
+margin: 1rem;
+width: 14%;
+height: auto;
+}
+/* Footer */
+
+footer {
+  position: relative;
+  z-index: 5;
+  top: 4rem;
+  background-color: white;
+  height: 3rem;
+  max-width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+footer nav a {
+text-decoration: none;
 }
