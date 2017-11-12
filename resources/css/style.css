@@ -1,207 +1,567 @@
-
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
+  background-color: rgb(52,89,97);
 }
-.content{
-  display: block;
-  height: 60rem;
+body {
+  margin: 0 auto;
+  width: 1080px;
 }
-div{
-display: block;
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* Header */
-header  {
-    position: fixed;
-    z-index: 20;
-    top: 0;
-    height: 4rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background-color: white;
-}
-.head li{
-  display: inline-block;
-}
 
-header h2 {
-  font-size: 2.0rem;
-  color: grey;
-  font-weight: bold;
-}
-header b {
-  font-size: 2.0rem;
-  color: black;
-}
-header li {
+header {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  height: 4rem;
+  width: 1080px;
   display: flex;
-  line-height:1.0rem;
+  align-items: center;
+  background-color: white;
 }
-header nav a {
-text-decoration: none;
-color: darkgrey;
-font-weight: 300;
 
+#logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 24px;
+  margin-right: 8px;
 }
-header .mobile {
+
+#logo img {
+  height: 3rem;
+  display: flex;
+}
+
+#logo a:hover {
+  background-color: rgb(213,248,255);
+}
+
+#logo a:active {
+  background-color: red;
+}
+
+header span {
+  color: rgb(52,89,97);
+  font-size: 1.33rem;
+}
+
+#colmar {
+  font-weight: bold;
+  color: rgb(64, 64, 64);
+}
+
+.desktop {
+  margin-right: 1rem;
+}
+
+.desktop a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: rgb(64, 64, 64);
+}
+
+nav a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+nav a:active {
+  color: rgb(213,248,255);
+  background-color: black;
+  border-radius: 5px;
+}
+
+.mobile {
   display: none;
 }
 
-/* Start */
+@media only screen and (max-width: 1079px) {
 
-.start {
-  display: block;
-  padding:2.0rem 1.5rem;
-  background-color: grey;
-}
-.start img {
-  width: 60%;
-  height:auto;
-  align-items: flex-start;
-  margin-right: 1.5rem;
-}
-
-.start2 {
-  display:block;
-  margin-left:1.5rem;
-  align-items: right;
-  justify-content: center;
-  width: 40%;
-  height: 40%;
-}
-.start h1{
-  font-size:3rem;
-  font-weight: bold;
-}
-.button{
-background-color: darkgrey;
-padding-top: 0.5rem;
-padding-bottom: 0.5rem;
-color: white;
-width: 20%;
-height: 2rem;
-text-align: center;
-font-size: 1rem;
-}
-
-/* Practice */
-.practicecontainer {
+  .desktop {
+    display: none;
+  }
+  .mobile {
     width: 100%;
-    position: relative;
-    top: 4rem;
-    z-index: 10;
-    background-color: rgb(213,248,255);
     display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mobile img {
+    height: 32px;
+  }
+
+  .mobile a:hover {
+    background-color: rgb(255,233,155);
+    border-radius: 5px;
+  }
+
+  .mobile a:active {
+    background-color: orange;
+    border-radius: 5px;
+  }
+
 }
-.practicecontent {
-    padding: 32px 0px 32px 24px;
+
+@media only screen and (max-width: 600px) {
+
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    width: 100%;
     display: flex;
-    background-color: lightblue;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .mobile img {
+    height: 32px;
+  }
+
+  .mobile a:hover {
+    background-color: rgb(255,233,155);
+    border-radius: 5px;
+  }
+
+  .mobile a:active {
+    background-color: orange;
+    border-radius: 5px;
+  }
+
 }
-.leftbox {
-    margin-right: 24px;
-    display: block;
+
+/* Learn Something New Everyday */
+
+.container {
+  width: 100%;
+  background-color: #6534ff;
+  position: relative;
+  z-index: 15;
+  top: 4rem;
+  display: flex;
 }
-.leftbox h1 {
+
+.learncontent {
+  display: flex;
+  padding: 32px 24px;
+}
+
+.imaging {
+  display: flex;
+  width: 60%;
+  margin-right: 40px;
+}
+
+.imagebox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.learnbox {
+  color: rgb(16,16,16);
+  margin-top: 3rem;
+  line-height: 1.3;
+  width: 22rem;
+  display: block;
+}
+
+.learnbox h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.learnbox p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  width: 90%;
+}
+
+.startbutton {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.learnbox span {
+  background-color: rgb(107,124,127);
+  padding: 8px 0px;
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.learnbox span a {
+  color: white;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.learnbox span a:hover {
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+}
+
+.learnbox span a:active {
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+}
+
+.mobilegraybox {
+  display: none;
+}
+
+@media only screen and (max-width: 1079px) {
+
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+  }
+  .learnbox {
+    margin-top: 0.5rem;
+  }
+
+  .learnbox h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .learnbox p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .learncontent {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .mobilegraybox {
+    max-width: 100%;
+    height: 9.25rem;
+    background-image: url("../images/books-library.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: stretch;
+    display: flex;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .imaging {
+    display: none;
+  }
+
+  .imagebox {
+    display: none;
+  }
+
+  .learnbox {
+    color: rgb(64,64,64);
+    line-height: 1.4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .learnbox h1 {
     font-weight: bold;
     font-size: 2rem;
-    margin-bottom: 24px;
-}
-.rightbox {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-}
-.emanuel {
-    margin-bottom: 2rem;
-    display: block;
-}
-.emanuel img {
-    max-width: 100%;
-    height: auto;
-}
-.leftbox p {
-    font-weight: 100;
-    margin-bottom: 32px;
-}
-.leftbox span {
-    font-weight: 300;
-    font-size: 0.75rem;
-}
-.infobox {
-    width: 423px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: center;
-}
-#oliver {
-    background-color: rgb(255,233,155);
-}
-.desktoppic {
-    width: 35%;
-}
-.desktoppic img {
-    max-width: 100%;
-    height: auto;
-    margin: 1rem;
-    border: 1px solid rgb(220,220,220);
-}
-.mobilepic {
-    display: none;
-}
-.textbox {
-    color: rgb(16,16,16);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 2.5rem 1.5rem 3rem 2rem;
-}
-.textbox a {
-    color: blue;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
-.textbox h2 {
+    margin: 2rem 1rem;
+    width: auto;
+  }
+
+  .learnbox p {
     font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    letter-spacing: .4px;
-}
-.textbox span {
-    font-weight: 300;
-    font-size: 0.8rem;
-    margin-bottom: 1.2rem;
-}
-.textbox a {
-    color: blue;
-    font-weight: 400;
-    font-size: 0.9rem;
-    text-decoration: none;
-}
-#special {
-    display: none;
-}
-.infobox {
-    width: 423px;
+    margin: 0 1rem 1.5rem 1rem;
+    width: auto;
+  }
+
+  .startbutton {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content: space-around;
+  }
+
+  .learnbox span {
+    background-color: rgb(128,128,128);
+    padding: 8px 0px;
+    margin: 0 1rem 2rem 1rem;
+    width: 100%;
+  }
+
+  .learnbox span a {
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+  }
 }
-/* Learn */
-.learningcontainer {
+
+/* Practicing */
+
+.practicecontainer {
+  width: 100%;
+  position: relative;
+  top: 4rem;
+  z-index: 10;
+  background-color: #bbc4ef;
+  display: flex;
+}
+
+.practicecontent {
+  padding: 32px 0px 32px 24px;
+  display: flex;
+  color: rgb(16,16,16);
+}
+
+.leftbox {
+  margin-right: 24px;
+}
+
+.emanuel {
+  margin-bottom: 2rem;
+}
+
+.emanuel img {
+  max-width: 100%;
+  height: auto;
+}
+
+.leftbox h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.leftbox p {
+  font-weight: 100;
+  margin-bottom: 32px;
+}
+
+.leftbox span {
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.rightbox {
+  width: 423px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infobox {
+  width: 423px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.desktoppic {
+  width: 35%;
+}
+
+.desktoppic img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
+  border: 1px solid rgb(220,220,220);
+}
+
+#oliver {
+  background-color: #fccdd3;
+}
+
+.textbox {
+  color: rgb(16,16,16);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 2.5rem 1.5rem 3rem 2rem;
+
+}
+
+#special {
+  display: none;
+}
+
+.textbox h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: .4px;
+}
+
+.textbox span {
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.textbox a {
+  color: blue;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.textbox a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.textbox a:active {
+  text-decoration: underline;
+  color: purple;
+}
+
+#olivertext {
+  margin: 0;
+  line-height: 2;
+}
+
+.mobilepic {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  .practicecontainer  {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .practicecontent {
+    margin: 1rem;
+    padding: 0rem;
+  }
+
+  .leftbox {
+    display: none;
+  }
+
+  .rightbox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .infobox {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobilepic {
+    display: block;
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .mobilepic img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .desktoppic {
+    display: none;
+  }
+
+  .textbox {
+    margin: 1rem 0 1rem 1rem;
+    padding: 0rem;
+  }
+
+  #special {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .textbox h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding: 0;
+  }
+
+  .textbox span {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .textbox a {
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+  }
+
+  #deskguest {
+  display: none;
+  }
+
+  #oliver {
+    background-color: #fccdd3;
+  }
+
+}
+
+/* Start Learning */
+
+  .learningcontainer {
     position: relative;
     z-index: 10;
     top: 4rem;
-    background-color: rgb(123,211,229);
+    background-color: #6534ff;
     padding-bottom: 1.5rem;
-}
-.learningcontainer h1 {
+  }
+
+  .learningcontainer h1 {
     color: rgb(16,16,16);
     font-size: 2rem;
     font-weight: 500;
@@ -209,8 +569,9 @@ font-size: 1rem;
     width: 100%;
     text-align: center;
     margin: 0;
-}
-.learningbox {
+  }
+
+  .learningbox {
     color: rgb(64,64,64);
     display: flex;
     flex-direction: row;
@@ -218,127 +579,243 @@ font-size: 1rem;
     justify-content: space-around;
     margin-bottom: 1.5rem;
     line-height: 1.15;
-}
-.subjects {
+
+  }
+
+  .subjects {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
-.subjectbox {
+  }
+
+  .subjectbox {
     height: 276px;
     width: 280px;
     display: flex;
     flex-direction: column;
     margin: 0.5rem 1rem;
     background-color: white;
-}
-.subjectpic {
+
+  }
+
+  .subjectpic {
     margin: 0;
     padding: 0;
-}
-.subjectpic img {
+  }
+
+  .subjectpic img {
     max-width: 100%;
     height: auto;
-}
-img {
-    border-style: none;
-}
-.subjecttext {
+  }
+
+  .subjecttext {
     margin: 0;
     padding: 0;
-}
-.subjecttext h2 {
+  }
+
+  .subjecttext h2 {
     font-size: 1.2rem;
     font-weight: 500;
     margin: 0.9rem 0rem 0.5rem 1rem;
     padding: 0;
-}
-.subjecttext span, p {
-    font-weight: 300;
-    margin-left: 1rem;
-}
+  }
 
-.subjecttext span {
+  .subjecttext span {
     display: inline-block;
     margin: 0 0 0.5rem 1rem;
     color: rgb(52,89,97);
     font-size: 0.85rem;
+  }
+
+  .subjecttext span, p {
+    font-weight: 300;
+  }
+
+  .subjecttext p {
+    margin: 0 0 1.5rem 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    body {
+      width: 100%;
+    }
+
+    .subjectpic img {
+      display: none;
+    }
+
+    .subjecttext span, p {
+      display: none;
+    }
+
+    .learningcontainer {
+      padding-bottom: 1rem;
+    }
+
+    .learningcontainer h1 {
+      padding: 2rem 0 1rem 0;
+    }
+
+    .subjecttext h2 {
+      align-items: center;
+      color: rgb(30,111,127);
+    }
+
+    .subjectbox {
+      height: 3.2rem;
+      width: 90%;
+      margin: 0.5rem;
+      padding: 0;
+      background-color: lightgray;
+    }
+  }
+
+/* Thesis Exhibit */
+
+  #thesis.learningcontainer {
+    background-color: #bbc4ef;
+    padding-bottom: 0;
+  }
+
+  #title {
+    color: rgb(16,16,16);
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #thesis.practicecontent {
+    padding-top: 0rem;
+  }
+
+  #thesis.leftbox {
+    margin-right: 1rem;
+  }
+
+  .video {
+    margin-bottom: 1.5rem;
+  }
+
+  #thesis.leftbox h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding: 0;
+
+  }
+
+  #thesis.leftbox p {
+    margin-bottom: 0;
+  }
+
+  #fisma.rightbox {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .infobox.dark {
+    background-color: #fccdd3;
+  }
+
+  #fisma.infobox {
+    width: 423px;
+    height: auto;
+  }
+
+  #dtext {
+    margin: 0;
+    line-height: 2;
+  }
+
+@media only screen and (max-width: 600px) {
+
+  #fisma.rightbox {
+    display: none;
+  }
+
+  #thesis.leftbox {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  #thesis.leftbox h1, p {
+    display: none;
+  }
+
+  #thesis.learningcontainer {
+    background-color: rgb(109,187,204);
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #thesis.practicecontent {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .video {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
+    margin: 0;
+  }
+
+  .video video {
+    max-width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #title {
+    padding: 2rem 0;
+    margin: 0;
+    font-weight: 600;
+  }
 }
 
-
-.learn{
-display: block;
-margin:1rem;
-background-color: grey;
-width: 100%;
-flex-wrap: wrap;
-}
-.learn h1{
-  font-size:2rem;
-  font-weight: bold;
-  margin-top:2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.learn .block{
-  display: block;
-background-color: white;
-margin: 1rem;
-width: 20rem;
-}
-.learn .block img{
-height: auto;
-width: 18rem;
-}
-.learn .block h5{
-font-size: 2rem;
-margin-top: 1rem;
-}
-.learnbox{
-padding: 2rem 4rem;
-}
-
-/* Thesis */
-
-.thesis{
-display: block;
-padding: 1.5rem 2.0rem;
-}
-.thesis h1{
-  font-size:2rem;
-  font-weight: bold;
-  margin-top:2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.thesis video{
-width: 60%;
-}
-.thesis .block{
-width: 40%;
-
-}
-.thesis .block img{
-margin: 1rem;
-width: 14%;
-height: auto;
-}
 /* Footer */
 
-footer {
-  position: relative;
-  z-index: 5;
-  top: 4rem;
-  background-color: white;
-  height: 3rem;
-  max-width: 100%;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  font-weight: 300;
-  font-size: 0.9rem;
-}
-footer nav a {
-text-decoration: none;
-}
+ footer {
+   position: relative;
+   z-index: 5;
+   top: 4rem;
+   background-color: white;
+   height: 3rem;
+   max-width: 100%;
+   padding: 1.5rem;
+   display: flex;
+   align-items: center;
+   font-weight: 300;
+   font-size: 0.9rem;
+ }
+
+ footer span {
+   flex-grow: 1;
+ }
+
+ footer nav a {
+   padding: 0 0.5rem;
+   text-decoration: none;
+   color: rgb(64, 64, 64);
+ }
+
+ @media only screen and (max-width: 600px) {
+
+   footer {
+     padding: 1rem;
+     height: auto;
+     font-size: 0.75rem;
+   }
+   footer nav a {
+     display: none;
+   }
+ }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

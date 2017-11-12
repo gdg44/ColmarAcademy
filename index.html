@@ -8,45 +8,48 @@
 </head>
 <body>
   <!-- Header -->
-<header>
-
-      <nav class="head">
-        <ul>
-          <li><img src="./resources/images/ic-logo.svg"></li>
-          <li><h2><b>COLMAR</b>ACADEMY</h2></li>
-          <li><a href="#">On Campus</a></li>
-          <li><a href="#">Online</a></li>
-          <li><a href="#">For Companies</a></li>
-          <li><a href="#">Sign in</a></li>
-        </ul>
+  <header>
+      <div id="logo">
+        <a href="index.html"><img src="resources/images/ic-logo.svg" alt="fighting lion logo"></a>
+        <span id="colmar">COLMAR</span><span>ACADEMY</span>
+      </div>
+      <nav class="desktop">
+        <a href="#">On Campus</a>
+        <a href="#">Online</a>
+        <a href="#">For Companies</a>
+        <a href="#">Sign In</a>
       </nav>
       <nav class="mobile">
-        <ul>
-          <li><a href="#"><img src="./resources/images/ic-logo.svg"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-online.svg"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-on-campus.svg"></a></li>
-          <li><a href="#"><img src="./resources/images/ic-login.svg"></a></li>
-        </ul>
+        <a href="#"><img src="resources/images/ic-logo.svg" alt="fighting lion logo"></a>
+        <a href="#"><img src="resources/images/ic-on-campus.svg" alt="campus icon"></a>
+        <a href="#"><img src="resources/images/ic-online.svg" alt="computer icon"></a>
+        <a href="#"><img src="resources/images/ic-login.svg" alt="login icon"></a>
       </nav>
-</header>
+    </header>
   <!-- Header ends -->
   <!-- Start -->
-  <div class="content">
-    <div class="start">
-     <img src="./resources/images/banner.jpg">
-      <div class="start2">
-         <h1>LEARN SOMETHING NEW EVERYDAY</h1>
-         <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit</h3>
-         <div class="button">
-         <h4>Start here</h4>
-         </div>
-     </div>
+  <div class="container">
+    <div class="learncontent">
+      <div class="imaging">
+        <div class="imagebox">
+          <img src="./resources/images/banner.jpg" alt="students studying">
+        </div>
+      </div>
+      <div class="mobilegraybox">
+      </div>
+      <div class="learnbox">
+        <h1>Learn something new everyday</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="startbutton">
+          <span><a href="#">Start here</a></span>
+        </div>
+      </div>
     </div>
   </div>
   <!-- Start ends -->
   <!-- Practice -->
   <div class="content">
-    <div class="practice">
+    <div class="practicecontainer">
       <div class="practicecontent">
         <div class="leftbox">
           <div class="emanuel">
@@ -186,24 +189,41 @@
   </div>
   <!-- Learn ends-->
   <!-- Thesis-->
-  <div class="content">
-    <div class="thesis">
-      <video src="./resources/videos/thesis.mp4">
-      <h1>Reimagine urban</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum vestibulum scelerisque.
-        Donec commodo quam at aliquet pellentesque. Quisque et tellus eros. Nulla viverra mollis mi sed mollis. Ut a massa at neque egestas mattis a non dui. Aliquam vel dolor ut augue eleifend pharetra.
-      </p>
+  <div id="thesis" class="learningcontainer">
+      <h1 id="title">Thesis exhibit</h1>
+      <div id="thesis" class="practicecontent">
+        <div id="thesis" class="leftbox">
+          <div class="video">
+            <video width="100%" height="auto" controls=""> <source src="./resources/videos/thesis.mp4" type="video/mp4">Your browser does not support this video.</video>
+          </div>
+          <h1>Reimagine urban</h1>
+          <p>"Vivamus laoreet, nulla quis consectetur posuere, urna ipsum tincidunt elit, non condimentum ligula nisi at felis. Morbi sagittis lobortis sapien ac facilisis. Nam vel leo vel ante varius posuere. Donec id molestie nulla, a fermentum arcu."</p>
+        </div>
+
+        <div id="fisma" class="rightbox">
+
+          <div id="fisma" class="infobox dark">
+            <div class="desktoppic">
+              <img src="resources/images/thesis-fisma.jpg" alt="paperwork for design">
+            </div>
+            <div class="textbox">
+              <h2>Fisma: Design and</h2>
+              <span id="dtext">Designer showcase of new prototype </span> <span>product</span>
+            </div>
+          </div>
+
+          <div id="fisma" class="infobox">
+            <div class="desktoppic">
+              <img src="resources/images/thesis-now-and-then.jpg" alt="Empire State Building">
+            </div>
+            <div class="textbox">
+              <h2>Now and then</h2>
+              <span>Research study about New York</span>
+            </div>
+          </div>
+
+        </div>
       </div>
-         <div class="block">
-         <img src="./resources/images/thesis-fisma.jpg">
-         <h5>Fisma: Design and Prototype</h5>
-         <p>Designer showcase of new prototype product</p>
-         </div>
-         <div class="block">
-         <img src="./resources/images/thesis-now-and-then.jpg">
-         <h5>Now and then</h5>
-         <p>Research study about New York</p>
-         </div>
     </div>
   </div>
   <!-- Thesis ends-->
